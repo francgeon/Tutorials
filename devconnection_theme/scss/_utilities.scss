@@ -1,3 +1,14 @@
+// Container
+.container {
+    max-width: $max-width;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+
 // Text Styles
 .x-large {
     font-size: 4rem;
@@ -14,6 +25,10 @@
 .lead {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+.text-primary {
+    color: $primary-color;
 }
 
 // Backgrounds
@@ -58,34 +73,66 @@
     outline: none;
     transition: all 0.2s ease-in;
 
-    &.btn-primary{
+    &.btn-primary {
         @include set-background($primary-color);
-        &:hover{
+
+        &:hover {
             background: lighten($primary-color, 5%);
         }
     }
 
-    &.btn-dark{
+    &.btn-dark {
         @include set-background($dark-color);
-        &:hover{
+
+        &:hover {
             background: lighten($dark-color, 5%);
         }
     }
-    &.btn-success{
+
+    &.btn-success {
         @include set-background($success-color);
-        &:hover{
+
+        &:hover {
             background: lighten($success-color, 5%);
         }
     }
-    &.btn-danger{
+
+    &.btn-danger {
         @include set-background($danger-color);
-        &:hover{
+
+        &:hover {
             background: lighten($danger-color, 5%);
         }
     }
-    &:hover{
-        background:lighten($dark-color, 20%);
-        color:#fff;
+
+    &:hover {
+        background: lighten($dark-color, 20%);
+        color: #fff;
+    }
+}
+
+// Alerts
+.alert {
+    padding: 0.8rem;
+    margin: 1rem;
+    opacity: 0.9;
+    background: $light-color;
+    color: #333;
+
+    &.alert-primary {
+        @include set-background($primary-color);
+    }
+
+    &.alert-dark {
+        @include set-background($dark-color);
+    }
+
+    &.alert-success {
+        @include set-background($success-color);
+    }
+
+    &.alert-danger {
+        @include set-background($danger-color);
     }
 }
 
